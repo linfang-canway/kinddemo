@@ -14,6 +14,9 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "Hello, Gin!")
 	})
+	r.GET("/ping", func(c *gin.Context) {
+		c.String(http.StatusOK, "pong")
+	})
 
 	// 启动服务
 	r.Run(":8080")
